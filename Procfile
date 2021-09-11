@@ -1,1 +1,1 @@
-web: gunicorn django-forum.wsgi --log file -
+web: gunicorn Twitterclone.wsgi --log file -
