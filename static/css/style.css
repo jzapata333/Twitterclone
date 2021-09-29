@@ -1,6 +1,7 @@
 /*
 Common
 */
+
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@ Post
   display: flex;
   margin: 0 auto;
   max-width: 600px;
-  height: 7%;
+  height: 7.5%;
   border-bottom: rgba(204, 204, 204, 0.5);
   margin: 0 auto;
   border-left: 1px solid rgba(204, 204, 204, 0.5);
@@ -41,7 +42,7 @@ Post
 }
 
 h1 {
-  padding-left: 15px;
+  padding-left: 17px;
   padding-top: 12px;
   font-size: 20px;
 }
@@ -214,7 +215,6 @@ textarea {
 }
 
 .white-logo {
-  border-radius: 15px;
   width: 40px;
   position: relative;
   padding: 15%;
@@ -222,6 +222,12 @@ textarea {
 
 .white-logo:hover {
   background-color: #253340;
+  border-radius: 100px;
+}
+
+.white-twitter {
+  width: 40px;
+  position: relative;
 }
 
 .posts li:hover {
