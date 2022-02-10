@@ -17,7 +17,11 @@
             {% csrf_token %}
             <input  class="name-input" type="text" name="name" placeholder="Name" autocomplete="off" required />
             <textarea name="body" placeholder="What's Happening?" required></textarea>
-            <input id="upload-file" type="file" value="Choose File" name="image">
+
+            <input id="upload-file" type="file"><br>
+            <label class="upload" for="upload-file">
+                <i class="material-icons">add_photo_alternate</i>
+            </label>
             <input id="tweet-button" type="submit" value="Tweet" />
         </form>
        
@@ -44,7 +48,8 @@
                 <form id="likes-form" action="{% url 'like_post' post.pk %}" method='POST'>
                         {% csrf_token %}
                     <button class="like-button" type="submit", name="post_id", value="{{ post.id }}">
-                        &hearts;
+                        <!-- &hearts; -->
+                        <img class="like-heart" src="static/img/heart.png">
                     </button>
                     {{post.likes}}
                 </form> 
