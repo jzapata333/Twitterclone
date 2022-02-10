@@ -9,29 +9,24 @@
     </a>
     <h1>Home</h1>
 </section>
-
 <section class="content">
-    
     <section class="post_form">
         <form action="/" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <input  class="name-input" type="text" name="name" placeholder="Name" autocomplete="off" required />
             <textarea name="body" placeholder="What's Happening?" required></textarea>
-
-            <input id="upload-file" type="file"><br>
+            <input id="upload-file" type="file" value="Choose File" name="image"><br>
             <label class="upload" for="upload-file">
                 <i class="material-icons">add_photo_alternate</i>
             </label>
             <input id="tweet-button" type="submit" value="Tweet" />
         </form>
-       
     </section>
     <div class="divider"></div>
     <section class="posts">
         <ul>
             <!--for loop using Jinja template-->
             {% for post in posts %}
-
             <li>
                 <div class='logo'>
                     <img src="{% static 'img/twitter.png' %}" />
@@ -54,17 +49,13 @@
                     {{post.likes}}
                 </form> 
             </div> 
-
-           
             <img class='menu_icon js-menu-icon' src="{% static 'img/menu1.png' %}" />
                 <div class='menu'>
                     <a href="/edit/{{ post.id }}/">Edit</a> 
                     <br>
                     <a href="/delete/{{ post.id }}/">Delete</a>
                 </div>
-
-            </li>
-                
+            </li> 
             {% endfor %}
         </ul>
     </section>
@@ -74,10 +65,3 @@
 </section>
 
 {% endblock %}
-
-<!--
-    
-    fix update, cancel buttons when there is not picture.
-
--->
-
