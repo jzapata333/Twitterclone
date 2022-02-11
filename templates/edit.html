@@ -14,8 +14,12 @@
         {% csrf_token %}
         <input class="name-input" type="text" name="name" placeholder="Name" value="{{post.name}}" required />
         <textarea name="body" placeholder="What's Happening?" required>{{post.body}}</textarea>
-        <label for={{post.name}}></label>
-            <input type="file" name="image">
+        <label for={{post.name}}></label><br>
+            <!-- <input type="file" name="image"> -->
+            <input id="upload-file" type="file" value="Choose File" name="image">
+            <label class="upload-edit" for="upload-file">
+                <i class="material-icons">add_photo_alternate</i>
+            </label><br>
         {% if post.image.url %}
         <img class="post-border" src="{{ post.image.url }}">
         {% endif %}
